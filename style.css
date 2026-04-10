@@ -901,7 +901,7 @@ img {
 .fade-up:nth-child(4) { transition-delay: 0.3s; }
 .fade-up:nth-child(5) { transition-delay: 0.4s; }
 
-/* ===== MOBILE NAV OPEN ===== */
+/* ===== MOBILE NAV OPEN & HERO FIXES ===== */
 @media (max-width: 768px) {
   .nav-links {
     position: fixed;
@@ -991,6 +991,27 @@ img {
   .music-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  /* === TRIK BIAR FOTO BAND KELIHATAN FULL DI HP === */
+  .hero-bg {
+    background-color: var(--bg-primary); 
+  }
+
+  .hero-bg img {
+    height: 55%; /* Pendekin area gambar biar nge-zoom out ke samping */
+    object-position: center 15%; /* Geser fokus foto agak ke atas sedikit */
+  }
+
+  .hero-bg::after {
+    /* Gradien tebal dari bawah ke tengah biar batas potongan foto nggak keliatan */
+    background: linear-gradient(
+      to top,
+      var(--bg-primary) 0%,
+      var(--bg-primary) 45%,
+      rgba(244, 239, 230, 0.85) 55%,
+      transparent 100%
+    );
   }
 }
 
