@@ -1040,7 +1040,7 @@ img {
   .hero-bg img {
     height: 100%; 
     object-fit: contain; 
-    object-position: center 90px; /* Posisi foto diturunin 90px dari atas biar gak nabrak menu navigasi */
+    object-position: center 90px; 
   }
 
   .hero-bg::after {
@@ -1050,6 +1050,18 @@ img {
       var(--bg-primary) 60%, 
       rgba(244, 239, 230, 0) 100%
     );
+  }
+
+  /* === FIX UKURAN FONT JUDUL DI HP === */
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem; /* Ukuran diperkecil dari default biar rapi di HP */
+    line-height: 1.05; /* Spasi antar baris dilegain sedikit */
+    margin-bottom: 1rem;
   }
 
   .hero-content {
