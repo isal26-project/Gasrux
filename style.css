@@ -1039,15 +1039,15 @@ img {
 
   .hero-bg img {
     height: 100%; 
-    object-fit: contain; /* Ini kunci rahasianya: paksa foto masuk frame 100% tanpa di-crop pinggirannya */
-    object-position: top center; 
+    object-fit: contain; 
+    object-position: center 90px; /* Posisi foto diturunin 90px dari atas biar gak nabrak menu navigasi */
   }
 
   .hero-bg::after {
     background: linear-gradient(
       to top,
       var(--bg-primary) 0%,
-      var(--bg-primary) 60%, /* Warna solid dinaikin buat nutupin area kosong bawah */
+      var(--bg-primary) 60%, 
       rgba(244, 239, 230, 0) 100%
     );
   }
