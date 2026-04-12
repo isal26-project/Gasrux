@@ -512,38 +512,34 @@ img {
   opacity: 1;
 }
 
-/* =========================================
-   BAGIAN NAMA & IG PERSONIL YANG BARU
-   Gua paksa font & ukurannya beda jauh!
-   ========================================= */
+/* BAGIAN NAMA & IG PERSONIL */
 .member-name {
   font-family: var(--font-heading);
-  font-size: 2.2rem; /* Namanya agak dibesarin biar tetep dominan */
+  font-size: 2.2rem; 
   color: #fff; 
   margin-bottom: 2px;
   letter-spacing: 0.05em;
   display: flex;
-  align-items: center; /* Posisinya dibikin sejajar tengah */
+  align-items: center; /* Sejajar tengah vertikal */
   gap: 8px; 
 }
 
 .member-ig {
-  font-family: var(--font-body) !important; /* Paksa pakai font biasa, BUKAN Bebas Neue */
-  font-size: 0.75rem !important; /* Paksa ukurannya jadi keciiil */
+  font-family: var(--font-body) !important; /* Font biasa */
+  font-size: 0.75rem !important; /* Ukuran mungil */
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7); 
   letter-spacing: 0.05em;
-  text-transform: lowercase !important; /* Paksa huruf kecil semua */
+  text-transform: lowercase !important; /* Huruf kecil */
   text-decoration: none;
   transition: color 0.3s ease;
-  margin-top: 6px; /* Turunin dikit posisinya biar seimbang sama teks gede */
+  margin-top: 6px; /* Seimbangin sama teks gede Bebas Neue */
 }
 
 .member-ig:hover {
   color: var(--accent-light); 
   text-decoration: underline;
 }
-/* ========================================= */
 
 .member-role {
   font-size: 0.8rem;
@@ -1090,6 +1086,22 @@ img {
   .hero-content {
     margin-bottom: 1rem;
   }
+
+  /* =========================================
+     NEW FIX: STACKING (TUMPUK) NAME & IG DI HP
+     ========================================= */
+  .member-name {
+    font-size: 1.8rem; /* Sedikit kecilin nama di HP biar proporsional pas tumpuk */
+    flex-direction: column; /* Ubah jadi tumpuk vertikal */
+    align-items: flex-start; /* Rata kiri semua */
+    gap: 2px; /* Kecilin jarak tumpukannya */
+  }
+
+  .member-ig {
+    margin-top: 0; /* Hapus margin top desktop */
+    font-size: 0.7rem !important; /* Dikit lebih kecil lagi di HP */
+  }
+  /* ========================================= */
 }
 
 @media (max-width: 480px) {
