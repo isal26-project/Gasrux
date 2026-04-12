@@ -528,6 +528,71 @@ img {
   color: var(--accent-light); 
 }
 
+/* ===== MERCHANDISE SECTION ===== */
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 4rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.merch-card {
+  background: var(--bg-card); 
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.merch-card img {
+  width: 100%;
+  aspect-ratio: 3/4; /* Sama persis ukurannya sama foto personil */
+  object-fit: cover;
+  filter: sepia(0.2) saturate(0.8) brightness(0.9); 
+  transition: filter 0.5s ease, transform 0.8s ease;
+}
+
+.merch-card:hover img {
+  filter: saturate(1) brightness(0.6); 
+  transform: scale(1.05);
+}
+
+.merch-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(44, 39, 36, 0.95) 20%, transparent 100%);
+  transform: translateY(100%); 
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+  z-index: 2;
+}
+
+.merch-card:hover .merch-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.merch-name {
+  font-family: var(--font-heading);
+  font-size: 1.8rem; 
+  color: #fff; 
+  margin-bottom: 2px;
+  letter-spacing: 0.05em;
+}
+
+.merch-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--accent-light); 
+}
+
 /* ===== MUSIC SECTION ===== */
 .music {
   background: var(--bg-secondary);
@@ -778,7 +843,6 @@ img {
   gap: 1.2rem;
 }
 
-/* KODE CSS TERBARU: DIBIKIN SIMPLE BIAR IKON GA KOTAK */
 .contact-channel {
   display: flex;
   align-items: center;
@@ -802,7 +866,6 @@ img {
   transform: translateX(4px);
 }
 
-/* CSS KHUSUS BUAT LOGO SOSMED (BULAT) */
 .social-bar {
   display: flex;
   align-items: center;
@@ -959,7 +1022,8 @@ img {
     flex: 1 1 auto;
   }
 
-  .members-grid {
+  .members-grid,
+  .merch-grid { /* Biar Merch juga jadi 2 kolom di HP */
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -997,7 +1061,8 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .members-grid {
+  .members-grid,
+  .merch-grid { /* Biar Merch jadi 2 kolom juga di HP kecil, atau bisa diubah 1fr kalau kepanjangan */
     grid-template-columns: 1fr 1fr;
   }
 
