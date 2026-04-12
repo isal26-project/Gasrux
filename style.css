@@ -520,20 +520,20 @@ img {
   margin-bottom: 2px;
   letter-spacing: 0.05em;
   display: flex;
-  align-items: center; /* Sejajar tengah vertikal */
+  align-items: center; 
   gap: 8px; 
 }
 
 .member-ig {
-  font-family: var(--font-body) !important; /* Font biasa */
-  font-size: 0.75rem !important; /* Ukuran mungil */
+  font-family: var(--font-body) !important; 
+  font-size: 0.75rem !important; 
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7); 
   letter-spacing: 0.05em;
-  text-transform: lowercase !important; /* Huruf kecil */
+  text-transform: lowercase !important; 
   text-decoration: none;
   transition: color 0.3s ease;
-  margin-top: 6px; /* Seimbangin sama teks gede Bebas Neue */
+  margin-top: 6px; 
 }
 
 .member-ig:hover {
@@ -1053,6 +1053,7 @@ img {
     align-items: flex-start;
   }
 
+  /* === FIX FOTO HERO DI MOBILE (HP) BIAR GAK KEPOTONG === */
   .hero-bg {
     background-color: var(--bg-primary); 
   }
@@ -1060,7 +1061,7 @@ img {
   .hero-bg img {
     height: 100%; 
     object-fit: contain; 
-    object-position: center 90px; 
+    object-position: center 72px; /* Kunci perbaikannya di sini biar ngepas sama menu */
   }
 
   .hero-bg::after {
@@ -1088,18 +1089,18 @@ img {
   }
 
   /* =========================================
-     NEW FIX: STACKING (TUMPUK) NAME & IG DI HP
+     FIX STACKING (TUMPUK) NAME & IG DI HP
      ========================================= */
   .member-name {
-    font-size: 1.8rem; /* Sedikit kecilin nama di HP biar proporsional pas tumpuk */
-    flex-direction: column; /* Ubah jadi tumpuk vertikal */
-    align-items: flex-start; /* Rata kiri semua */
-    gap: 2px; /* Kecilin jarak tumpukannya */
+    font-size: 1.8rem; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 2px; 
   }
 
   .member-ig {
-    margin-top: 0; /* Hapus margin top desktop */
-    font-size: 0.7rem !important; /* Dikit lebih kecil lagi di HP */
+    margin-top: 0; 
+    font-size: 0.7rem !important; 
   }
   /* ========================================= */
 }
