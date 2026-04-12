@@ -512,13 +512,38 @@ img {
   opacity: 1;
 }
 
+/* =========================================
+   BAGIAN NAMA & IG PERSONIL YANG BARU
+   Gua paksa font & ukurannya beda jauh!
+   ========================================= */
 .member-name {
   font-family: var(--font-heading);
-  font-size: 1.8rem; 
+  font-size: 2.2rem; /* Namanya agak dibesarin biar tetep dominan */
   color: #fff; 
   margin-bottom: 2px;
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center; /* Posisinya dibikin sejajar tengah */
+  gap: 8px; 
 }
+
+.member-ig {
+  font-family: var(--font-body) !important; /* Paksa pakai font biasa, BUKAN Bebas Neue */
+  font-size: 0.75rem !important; /* Paksa ukurannya jadi keciiil */
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7); 
+  letter-spacing: 0.05em;
+  text-transform: lowercase !important; /* Paksa huruf kecil semua */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-top: 6px; /* Turunin dikit posisinya biar seimbang sama teks gede */
+}
+
+.member-ig:hover {
+  color: var(--accent-light); 
+  text-decoration: underline;
+}
+/* ========================================= */
 
 .member-role {
   font-size: 0.8rem;
@@ -1032,7 +1057,6 @@ img {
     align-items: flex-start;
   }
 
-  /* === FIX FOTO HERO DI MOBILE (HP) BIAR GAK KEPOTONG === */
   .hero-bg {
     background-color: var(--bg-primary); 
   }
@@ -1052,15 +1076,14 @@ img {
     );
   }
 
-  /* === FIX UKURAN FONT JUDUL DI HP === */
   .hero-eyebrow {
     font-size: 0.7rem;
     margin-bottom: 0.8rem;
   }
 
   .hero-title {
-    font-size: 2.8rem; /* Ukuran diperkecil dari default biar rapi di HP */
-    line-height: 1.05; /* Spasi antar baris dilegain sedikit */
+    font-size: 2.8rem; 
+    line-height: 1.05; 
     margin-bottom: 1rem;
   }
 
