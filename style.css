@@ -6,29 +6,18 @@
 }
 
 :root {
-  /* Konsep Earthy & Anak Vespa */
-  /* Warna background cerah ala kertas/pasir */
   --bg-primary: #F4EFE6; 
   --bg-secondary: #EAE3D5;
   --bg-card: #FFFFFF;
-  
-  /* Hijau Olive khas Vespa klasik sebagai aksen utama */
   --accent: #4A7C59; 
-  /* Oranye bata buat tombol hover/variasi */
   --accent-light: #D96C4A; 
   --accent-glow: rgba(74, 124, 89, 0.3);
-  
-  /* Teks gelap kecokelatan biar ngga sakit di mata (bukan hitam murni) */
   --text-primary: #2C2724; 
   --text-secondary: #5C554F;
   --text-muted: #8C847B;
-  
   --border: rgba(44, 39, 36, 0.1);
-  
-  /* Mengganti font heading menjadi Bebas Neue */
   --font-heading: 'Bebas Neue', Impact, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
-  
   --nav-height: 72px;
   --section-padding: clamp(80px, 10vw, 140px);
 }
@@ -51,7 +40,7 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   line-height: 1.15;
-  letter-spacing: 0.05em; /* Tambahan letter-spacing biar Bebas Neue lebih enak dibaca */
+  letter-spacing: 0.05em; 
 }
 
 a {
@@ -81,7 +70,6 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 0 clamp(24px, 5vw, 80px);
-  /* Latar belakang nav agak terang */
   background: linear-gradient(to bottom, rgba(244, 239, 230, 0.95) 0%, transparent 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -133,13 +121,13 @@ img {
   bottom: -4px;
   left: 0;
   width: 0;
-  height: 2px; /* Garis bawah lebih tebal sedikit */
+  height: 2px; 
   background: var(--accent);
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--accent); /* Hover text berubah warna ke aksen */
+  color: var(--accent); 
 }
 
 .nav-links a:hover::after {
@@ -187,7 +175,6 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  /* Filter disesuaikan agar gambar tidak terlalu gelap */
   filter: sepia(0.2) saturate(0.8) brightness(0.65); 
 }
 
@@ -195,7 +182,6 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  /* Gradien disesuaikan untuk nuansa terang */
   background: linear-gradient(
     to top,
     rgba(244, 239, 230, 0.95) 0%,
@@ -246,15 +232,15 @@ img {
 }
 
 .hero-title {
-  font-size: clamp(3.5rem, 8vw, 7rem); /* Diperbesar karena Bebas Neue lebih padat */
-  font-weight: 400; /* Bebas Neue biasanya cukup tebal meski 400 */
+  font-size: clamp(3.5rem, 8vw, 7rem); 
+  font-weight: 400; 
   color: var(--text-primary);
   line-height: 0.9;
   margin-bottom: 1.5rem;
 }
 
 .hero-title em {
-  font-style: normal; /* Bebas Neue gak ada italic aslinya */
+  font-style: normal; 
   color: var(--accent);
 }
 
@@ -282,9 +268,9 @@ img {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border-radius: 4px; /* Sudut sedikit melengkung lebih ramah */
+  border-radius: 4px; 
   cursor: pointer;
-  border: 2px solid transparent; /* Border tebal untuk btn-outline nanti */
+  border: 2px solid transparent; 
   transition: all 0.3s ease;
   font-family: var(--font-body);
 }
@@ -324,7 +310,7 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  color: var(--accent); /* Warna scroll line jadi aksen */
+  color: var(--accent); 
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -401,7 +387,7 @@ img {
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
-  filter: sepia(0.2) saturate(0.8); /* Disesuaikan nuansa earthy */
+  filter: sepia(0.2) saturate(0.8); 
   border-radius: 4px;
 }
 
@@ -420,9 +406,9 @@ img {
   left: 0;
   right: 0;
   padding: 1.5rem;
-  background: linear-gradient(to top, rgba(44, 39, 36, 0.8), transparent); /* Background gelap buat teks */
+  background: linear-gradient(to top, rgba(44, 39, 36, 0.8), transparent); 
   font-size: 0.78rem;
-  color: #fff; /* Teks putih biar kontras */
+  color: #fff; 
   letter-spacing: 0.08em;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -489,7 +475,7 @@ img {
 }
 
 .member-card {
-  background: var(--bg-card); /* Background card putih */
+  background: var(--bg-card); 
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -499,7 +485,7 @@ img {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  filter: sepia(0.2) saturate(0.8) brightness(0.9); /* Disesuaikan */
+  filter: sepia(0.2) saturate(0.8) brightness(0.9); 
   transition: filter 0.5s ease, transform 0.8s ease;
 }
 
@@ -514,7 +500,6 @@ img {
   left: 0;
   right: 0;
   padding: 2.5rem 1.5rem 1.5rem;
-  /* Latar belakang info gelap agar teks putih terbaca jelas */
   background: linear-gradient(to top, rgba(44, 39, 36, 0.95) 20%, transparent 100%);
   transform: translateY(100%); 
   opacity: 0;
@@ -529,8 +514,8 @@ img {
 
 .member-name {
   font-family: var(--font-heading);
-  font-size: 1.8rem; /* Lebih besar karena Bebas Neue */
-  color: #fff; /* Paksa warna putih */
+  font-size: 1.8rem; 
+  color: #fff; 
   margin-bottom: 2px;
   letter-spacing: 0.05em;
 }
@@ -540,7 +525,7 @@ img {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--accent-light); /* Oranye bata */
+  color: var(--accent-light); 
 }
 
 /* ===== MUSIC SECTION ===== */
@@ -560,7 +545,7 @@ img {
 .releases-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem; /* Jarak antar card diperbesar sedikit */
+  gap: 2rem; 
 }
 
 .release-card {
@@ -573,7 +558,7 @@ img {
   overflow: hidden;
   position: relative;
   border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(44, 39, 36, 0.08); /* Tambah shadow tipis */
+  box-shadow: 0 4px 12px rgba(44, 39, 36, 0.08); 
 }
 
 .release-card-art img {
@@ -598,7 +583,7 @@ img {
 }
 
 .release-card:hover .release-play {
-  background: rgba(44, 39, 36, 0.4); /* Gelap saat hover */
+  background: rgba(44, 39, 36, 0.4); 
 }
 
 .play-icon {
@@ -633,7 +618,7 @@ img {
 
 .release-title {
   font-family: var(--font-heading);
-  font-size: 1.4rem; /* Lebih besar */
+  font-size: 1.4rem; 
   color: var(--text-primary);
   margin-bottom: 2px;
   letter-spacing: 0.02em;
@@ -725,7 +710,7 @@ img {
 .show-date-day {
   display: block;
   font-family: var(--font-heading);
-  font-size: 3rem; /* Membesar */
+  font-size: 3rem; 
   color: var(--accent);
   line-height: 1;
 }
@@ -793,12 +778,13 @@ img {
   gap: 1.2rem;
 }
 
+/* KODE CSS TERBARU: DIBIKIN SIMPLE BIAR IKON GA KOTAK */
 .contact-channel {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -807,27 +793,16 @@ img {
   color: var(--accent);
 }
 
-.channel-icon {
-  width: 44px;
-  height: 44px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 50%; /* Icon bulat lebih luwes */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 1.2rem;
+.contact-channel svg {
   color: var(--accent);
-  transition: border-color 0.3s, background 0.3s, color 0.3s;
+  transition: transform 0.3s ease;
 }
 
-.contact-channel:hover .channel-icon {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+.contact-channel:hover svg {
+  transform: translateX(4px);
 }
 
+/* CSS KHUSUS BUAT LOGO SOSMED (BULAT) */
 .social-bar {
   display: flex;
   align-items: center;
@@ -860,7 +835,7 @@ img {
 /* ===== FOOTER ===== */
 .footer {
   padding: 3rem clamp(24px, 5vw, 80px);
-  background-color: #2C2724; /* Footer gelap untuk kontras */
+  background-color: #2C2724; 
   color: #F4EFE6;
   display: flex;
   align-items: center;
@@ -993,25 +968,27 @@ img {
     align-items: flex-start;
   }
 
-  /* === TRIK BIAR FOTO BAND KELIHATAN FULL DI HP === */
+  /* === FIX FOTO HERO DI MOBILE (HP) === */
   .hero-bg {
     background-color: var(--bg-primary); 
   }
 
   .hero-bg img {
-    height: 55%; /* Pendekin area gambar biar nge-zoom out ke samping */
-    object-position: center 15%; /* Geser fokus foto agak ke atas sedikit */
+    height: 50vh; 
+    object-position: top center; 
   }
 
   .hero-bg::after {
-    /* Gradien tebal dari bawah ke tengah biar batas potongan foto nggak keliatan */
     background: linear-gradient(
       to top,
       var(--bg-primary) 0%,
-      var(--bg-primary) 45%,
-      rgba(244, 239, 230, 0.85) 55%,
-      transparent 100%
+      var(--bg-primary) 50%,
+      rgba(244, 239, 230, 0) 100%
     );
+  }
+
+  .hero-content {
+    margin-bottom: 1rem;
   }
 }
 
@@ -1025,6 +1002,6 @@ img {
   }
 
   .releases-grid {
-    grid-template-columns: 1fr; /* 1 kolom di HP biar cover art besar */
+    grid-template-columns: 1fr; 
   }
 }
