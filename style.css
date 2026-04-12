@@ -549,7 +549,7 @@ img {
 
 .merch-card img {
   width: 100%;
-  aspect-ratio: 3/4; /* Sama persis ukurannya sama foto personil */
+  aspect-ratio: 3/4; 
   object-fit: cover;
   filter: sepia(0.2) saturate(0.8) brightness(0.9); 
   transition: filter 0.5s ease, transform 0.8s ease;
@@ -1023,7 +1023,7 @@ img {
   }
 
   .members-grid,
-  .merch-grid { /* Biar Merch juga jadi 2 kolom di HP */
+  .merch-grid { 
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1032,13 +1032,14 @@ img {
     align-items: flex-start;
   }
 
-  /* === FIX FOTO HERO DI MOBILE (HP) === */
+  /* === FIX FOTO HERO DI MOBILE (HP) BIAR GAK KEPOTONG === */
   .hero-bg {
     background-color: var(--bg-primary); 
   }
 
   .hero-bg img {
-    height: 50vh; 
+    height: 100%; 
+    object-fit: contain; /* Ini kunci rahasianya: paksa foto masuk frame 100% tanpa di-crop pinggirannya */
     object-position: top center; 
   }
 
@@ -1046,7 +1047,7 @@ img {
     background: linear-gradient(
       to top,
       var(--bg-primary) 0%,
-      var(--bg-primary) 50%,
+      var(--bg-primary) 60%, /* Warna solid dinaikin buat nutupin area kosong bawah */
       rgba(244, 239, 230, 0) 100%
     );
   }
@@ -1062,7 +1063,7 @@ img {
   }
 
   .members-grid,
-  .merch-grid { /* Biar Merch jadi 2 kolom juga di HP kecil, atau bisa diubah 1fr kalau kepanjangan */
+  .merch-grid { 
     grid-template-columns: 1fr 1fr;
   }
 
