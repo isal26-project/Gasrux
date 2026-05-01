@@ -728,6 +728,54 @@ img {
   border-radius: 2px;
 }
 
+/* ===== BUTTON STYLES ===== */
+/* Tambahkan ini di bawah bagian Music Section lo */
+
+.featured-track-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Tombol Spotify (Warna Accent/Hijau) */
+.btn-primary {
+  background: var(--accent); /* Mengikuti warna utama web lo */
+  color: white;
+  border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+/* Tombol Apple Music (Outline) */
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+}
+
+.btn-outline:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
 /* ===== FEATURED TRACK BANNER ===== */
 .featured-track {
   display: flex;
